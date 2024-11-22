@@ -34,13 +34,13 @@ class Colonie {
         return sortedNames.toString();
     }
 
-    public ArrayList<Case> getDeplacements(String nom) throws DroneNonTrouveException {
+    public ArrayList<Case> getDeplacements(String nom) throws DroneNonTrouveExc {
         for (Drone drone : drones) {
             if (drone.getNom().equals(nom)) {
                 return drone.getDeplacements();
             }
         }
-        throw new DroneNonTrouveException("Aucun drone trouvé avec le nom : " + nom);
+        throw new DroneNonTrouveExc("Aucun drone trouvé avec le nom : " + nom);
     }
 
     public HashSet<Case> getOccupation() {

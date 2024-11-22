@@ -1,15 +1,15 @@
 public class DroneAerien extends Drone {
     private float hauteur;
 
-    public DroneAerien(String nom, int adresseMAC, float hauteur) throws DroneAerienException {
+    public DroneAerien(String nom, int adresseMAC, float hauteur) throws DroneAerienExc {
         super(nom, adresseMAC);
         if (hauteur <= 0) {
-            throw new DroneAerienException("La hauteur du drone aérien doit être positive.");
+            throw new DroneAerienExc("La hauteur du drone aérien doit être positive.");
         }
         this.hauteur = hauteur;
     }
 
-    public DroneAerien(String nom, int adresseMAC) throws DroneAerienException {
+    public DroneAerien(String nom, int adresseMAC) throws DroneAerienExc {
         super(nom, adresseMAC);
         this.hauteur = 2.5f;
     }

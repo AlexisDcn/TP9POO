@@ -1,10 +1,10 @@
 public class DroneTerrestre extends Drone {
     private int nombreRoues;
 
-    public DroneTerrestre(String nom, int adresseMAC, int nombreRoues) throws DroneTerrestreException {
+    public DroneTerrestre(String nom, int adresseMAC, int nombreRoues) throws DroneTerrestreExc {
         super(nom, adresseMAC);
         if (nombreRoues < 2) {
-            throw new DroneTerrestreException("Le drone terrestre doit avoir au moins 2 roues.");
+            throw new DroneTerrestreExc("Le drone terrestre doit avoir au moins 2 roues.");
         }
         this.nombreRoues = nombreRoues;
     }
